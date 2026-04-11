@@ -1,0 +1,1548 @@
+type: collection.insomnia.rest/5.0
+name: Social
+meta:
+  id: wrk_ded7b6932ba8431ebc86bbf37e8867cf
+  created: 1746348028640
+  modified: 1746348028640
+collection:
+  - name: Social
+    meta:
+      id: fld_40583804ab554efdb430f4207dc052ea
+      created: 1746348028644
+      modified: 1747118216239
+      sortKey: -1746348027235
+    children:
+      - name: User
+        meta:
+          id: fld_cd27dcef5ad4421989d1734809be0e6f
+          created: 1746348028647
+          modified: 1747656440906
+          sortKey: -1746348027234
+        children:
+          - url: http://localhost:5000/api/v1/users/profile
+            name: Get profile
+            meta:
+              id: req_fe1b785816a940d8a56e2e6dd2deac41
+              created: 1746348028649
+              modified: 1747638207987
+              isPrivate: false
+              sortKey: -1746348027233
+            method: GET
+            body:
+              mimeType: application/json
+            headers:
+              - name: Content-Type
+                value: application/json
+            authentication:
+              type: bearer
+              disabled: false
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODIyZTYzZDRmNWRhYzFlMDU2ZGIwNTMiLCJuYW1lIjoiSm9obiIsImVtYWlsIjoiam9obkBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlzQWN0aXZlIjp0cnVlLCJpYXQiOjE3NDc2MzgyMDAsImV4cCI6MTc0ODI0MzAwMH0.kkhUgyuvomIcBFsR80vCIbx-NWgg5ehHyDX_K-EFNFY
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:5000/api/v1/users
+            name: Get all users
+            meta:
+              id: req_74505d3566ba439aa1a7413a42ee0e89
+              created: 1746348028652
+              modified: 1747656190293
+              isPrivate: false
+              sortKey: -1746348027232
+            method: GET
+            parameters:
+              - name: limit
+                value: "10"
+                disabled: false
+                id: pair_2923d11da1084525a6f5c72ae35573cb
+              - name: cursor
+                value: john@gmail.com
+                disabled: true
+                id: pair_919ded15562f4b34bea5bc44d005bf8f
+            authentication:
+              type: bearer
+              disabled: false
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODIyZTYzZDRmNWRhYzFlMDU2ZGIwNTMiLCJuYW1lIjoiVmFuIE5ndXllbiIsImVtYWlsIjoiam9obkBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlzQWN0aXZlIjp0cnVlLCJpYXQiOjE3NDc2NTYxMjksImV4cCI6MTc0ODI2MDkyOX0.XiAm8if5sUja0cCPk2L0oCdg76JlC91jKVDAPhPgcnI
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:5000/api/v1/users/6810c55c5c14932c68951559
+            name: Get a user
+            meta:
+              id: req_c9ecb1020b1e413284e488e12091e711
+              created: 1746348028654
+              modified: 1746348028654
+              isPrivate: false
+              sortKey: -1746348027231
+            method: GET
+            authentication:
+              type: bearer
+              disabled: false
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODEwYzU1YzVjMTQ5MzJjNjg5NTE1NTkiLCJuYW1lIjoiSm9obiIsImVtYWlsIjoiam9obkBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc0NTkzNzc3NSwiZXhwIjoxNzQ2NTQyNTc1fQ.OhSaS-bVdVGNOUR8J2CpwUxm31dcrk-TGU8tXafvYAc
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:5000/api/v1/users/6810c581942a5d0f6523d20f
+            name: Update a user
+            meta:
+              id: req_3c63539ffb2c412888c7e4f4e6f9d6d5
+              created: 1746348028656
+              modified: 1747646356422
+              isPrivate: false
+              sortKey: -1746348027230
+            method: PATCH
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                		"bio": "",
+                		"name": "",
+                    "birthdate": "2000-11-23",
+                    "phoneNumber": "+84948365423"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+            authentication:
+              type: bearer
+              disabled: false
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODEwYzU4MTk0MmE1ZDBmNjUyM2QyMGYiLCJuYW1lIjoiSm9obiIsImVtYWlsIjoiam9objFAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NDYxMDI3MjgsImV4cCI6MTc0NjcwNzUyOH0.nnFLEjx8FPTjHUsjKmWVKrwuy6t5K0H-vaFOkrToNHw
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:5000/api/v1/users/upload-avatar
+            name: Upload avatar
+            meta:
+              id: req_fac313ef38464eceab65bd320a683b62
+              created: 1746348028659
+              modified: 1746348028659
+              isPrivate: false
+              sortKey: -1746348027229
+            method: POST
+            body:
+              mimeType: application/json
+              text: "{\r
+
+                \    \"public_id\": \"vaujrpnfyekrbayvgnek\",\r
+
+                \    \"version\": 1746110647,\r
+
+                \    \"display_name\": \"vaujrpnfyekrbayvgnek\",\r
+
+                \    \"format\": \"png\",\r
+
+                \    \"resource_type\": \"image\"\r
+
+                }"
+            headers:
+              - name: Content-Type
+                value: application/json
+            authentication:
+              type: bearer
+              disabled: false
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODEwYzU1YzVjMTQ5MzJjNjg5NTE1NTkiLCJuYW1lIjoiSm9obiIsImVtYWlsIjoiam9obkBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlzQWN0aXZlIjp0cnVlLCJpYXQiOjE3NDYxMTA2MjEsImV4cCI6MTc0NjcxNTQyMX0.dvEu8mHD5MukmdWc7e_WaMPTunheoxJ2_wKvIStlplU
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:5000/api/v1/users/upload-cover
+            name: Upload cover photo
+            meta:
+              id: req_d29e70c31c704af69965af864bb30097
+              created: 1746348028662
+              modified: 1746348028662
+              isPrivate: false
+              sortKey: -1746348027228
+            method: POST
+            body:
+              mimeType: application/json
+              text: "{\r
+
+                \    \"public_id\": \"w0wx1irghvvp8dykrgtx\",\r
+
+                \    \"version\": 1746111010,\r
+
+                \    \"display_name\": \"w0wx1irghvvp8dykrgtx\",\r
+
+                \    \"format\": \"webp\",\r
+
+                \    \"resource_type\": \"image\"\r
+
+                }"
+            headers:
+              - name: Content-Type
+                value: application/json
+            authentication:
+              type: bearer
+              disabled: false
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODEwYzU1YzVjMTQ5MzJjNjg5NTE1NTkiLCJuYW1lIjoiSm9obiIsImVtYWlsIjoiam9obkBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlzQWN0aXZlIjp0cnVlLCJpYXQiOjE3NDYxMTA2MjEsImV4cCI6MTc0NjcxNTQyMX0.dvEu8mHD5MukmdWc7e_WaMPTunheoxJ2_wKvIStlplU
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:5000/api/v1/users/6810c55c5c14932c68951559
+            name: Delete a user (soft delete)
+            meta:
+              id: req_607cf5410e8c4bdcafc5f2b99ac576de
+              created: 1746348028665
+              modified: 1746348028665
+              isPrivate: false
+              sortKey: -1746348027227
+            method: DELETE
+            authentication:
+              type: bearer
+              disabled: false
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODEwYzU4MTk0MmE1ZDBmNjUyM2QyMGYiLCJuYW1lIjoiSm9obiIsImVtYWlsIjoiam9objFAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NDYxMDI3MjgsImV4cCI6MTc0NjcwNzUyOH0.nnFLEjx8FPTjHUsjKmWVKrwuy6t5K0H-vaFOkrToNHw
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: Friend
+        meta:
+          id: fld_1ab7ad1c61024a0f9c6dc637235dd520
+          created: 1746348028667
+          modified: 1747118499871
+          sortKey: -1746348027226
+        children:
+          - url: http://localhost:5000/api/v1/friends/request/6822f9b8d867609e319d922f
+            name: Send friend request
+            meta:
+              id: req_fadcd4c028fc47c5b1c269144577c8a4
+              created: 1746348028670
+              modified: 1747919774298
+              isPrivate: false
+              sortKey: -1746348027225
+            method: POST
+            authentication:
+              type: bearer
+              disabled: false
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODIyZTYzZDRmNWRhYzFlMDU2ZGIwNTMiLCJuYW1lIjoiVmFuIE5ndXllbiIsImVtYWlsIjoiam9obkBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlzQWN0aXZlIjp0cnVlLCJpYXQiOjE3NDc3NDQyNzgsImV4cCI6MTc0ODM0OTA3OH0.a2XpnNeuM9AofabIcWkyCfPkM7WckiXzOEZ4GQPsNnY
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:5000/api/v1/friends/cancel-request/6814bdcffac8384e1aac5da9
+            name: Cancel friend request
+            meta:
+              id: req_c31d47e37a984c778e067ed9f5d2e608
+              created: 1746348028672
+              modified: 1746540835920
+              isPrivate: false
+              sortKey: -1746348027224
+            method: POST
+            authentication:
+              type: bearer
+              disabled: false
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODEwYzU1YzVjMTQ5MzJjNjg5NTE1NTkiLCJuYW1lIjoiSm9obiIsImVtYWlsIjoiam9obkBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlzQWN0aXZlIjp0cnVlLCJpYXQiOjE3NDY1NDA4MjksImV4cCI6MTc0NzE0NTYyOX0.KjKJpDu5eMtZ3Kto5bfx3DONEFNXMwsCYWT5FjSZHdk
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:5000/api/v1/friends/accept-request/682c773e10734b8bc1619af7
+            name: Accept friend request
+            meta:
+              id: req_590416a0f80b4e0ea7e6a9873c64797c
+              created: 1746348028674
+              modified: 1747744614841
+              isPrivate: false
+              sortKey: -1746348027223
+            method: POST
+            authentication:
+              type: bearer
+              disabled: false
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODIyZjliOGQ4Njc2MDllMzE5ZDkyMmYiLCJuYW1lIjoiTWFyaWEiLCJlbWFpbCI6Im1hcmlhQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaXNBY3RpdmUiOnRydWUsImlhdCI6MTc0Nzc0NDU5MSwiZXhwIjoxNzQ4MzQ5MzkxfQ.bucorm6MrBmU7o9GnPvTSzyR49DuGuzF_n5XEZWDcSA
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:5000/api/v1/friends/reject-request/681a1693f97d9a1ac543e702
+            name: Reject friend request
+            meta:
+              id: req_e3ae20d7167c4570a6027f4b2c9371f2
+              created: 1746348028676
+              modified: 1746540215440
+              isPrivate: false
+              sortKey: -1746348027222
+            method: POST
+            authentication:
+              type: bearer
+              disabled: false
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODE0YmRjZmZhYzgzODRlMWFhYzVkYTkiLCJuYW1lIjoiVGhvbWFzIiwiZW1haWwiOiJ0aG9tYXNAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJpc0FjdGl2ZSI6dHJ1ZSwiaWF0IjoxNzQ2NTM5NjQ0LCJleHAiOjE3NDcxNDQ0NDR9.wEJ0T6IwkrsC674tQRbDMedRttVmfXpMTIGjFTVOmos
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:5000/api/v1/friends/request-pending
+            name: Get friend request (pending)
+            meta:
+              id: req_e8a6c7afc60841768f9daa184020d1c1
+              created: 1746348028679
+              modified: 1747798279179
+              isPrivate: false
+              sortKey: -1746348027221
+            method: GET
+            authentication:
+              type: bearer
+              disabled: false
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODIyZjliOGQ4Njc2MDllMzE5ZDkyMmYiLCJuYW1lIjoiTWFyaWEiLCJlbWFpbCI6Im1hcmlhQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaXNBY3RpdmUiOnRydWUsImlhdCI6MTc0Nzc5ODI3MSwiZXhwIjoxNzQ4NDAzMDcxfQ.iPoPOuFF5mo7_AshDriSo4UXghBrMM-KxTYGfXqE-xk
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:5000/api/v1/friends
+            name: Get my friends
+            meta:
+              id: req_2ad0966526ac454cbe74527556e1a77d
+              created: 1746348028682
+              modified: 1747802085054
+              isPrivate: false
+              sortKey: -1746348027220
+            method: GET
+            authentication:
+              type: bearer
+              disabled: false
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODIyZjliOGQ4Njc2MDllMzE5ZDkyMmYiLCJuYW1lIjoiTWFyaWEiLCJlbWFpbCI6Im1hcmlhQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaXNBY3RpdmUiOnRydWUsImlhdCI6MTc0Nzc5ODI3MSwiZXhwIjoxNzQ4NDAzMDcxfQ.iPoPOuFF5mo7_AshDriSo4UXghBrMM-KxTYGfXqE-xk
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:5000/api/v1/friends/682f1550afcea767b17de487
+            name: Unfriend
+            meta:
+              id: req_fa0b2b8e754146b0a846161060a3c843
+              created: 1747919644908
+              modified: 1747919977103
+              isPrivate: false
+              sortKey: -1746348027222.5
+            method: DELETE
+            authentication:
+              type: bearer
+              disabled: false
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODIyZTYzZDRmNWRhYzFlMDU2ZGIwNTMiLCJuYW1lIjoiVmFuIE5ndXllbiIsImVtYWlsIjoiam9obkBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlzQWN0aXZlIjp0cnVlLCJpYXQiOjE3NDc5MTk5NjUsImV4cCI6MTc0ODUyNDc2NX0.XRuVwLEq5Wyi8B7792x46O4JwU0FWa8kg1RZXwmdpr4
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: Auth
+        meta:
+          id: fld_7ad7fb1bf455470786251fa244d439d8
+          created: 1746348028685
+          modified: 1746348028685
+          sortKey: -1746348027219
+        children:
+          - url: http://localhost:5000/api/v1/auth/sign-up
+            name: Sign up
+            meta:
+              id: req_acd41df8836e4c718abbf9b8a15694e7
+              created: 1746348028687
+              modified: 1746612993031
+              isPrivate: false
+              sortKey: -1746348027218
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                    "name": "Thomas",
+                    "email": "thomas@gmail.com",
+                    "password": "test1234"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:5000/api/v1/auth/sign-in
+            name: Sign in
+            meta:
+              id: req_7f76178901a24b8a84cc94a856a1e9e1
+              created: 1746348028690
+              modified: 1747810247361
+              isPrivate: false
+              sortKey: -1746348027217
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                    "email": "john@gmail.com",
+                    "password": "test1234"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: Post
+        meta:
+          id: fld_c9ce148e3820480490f138e6967b03d6
+          created: 1746348028693
+          modified: 1746348028693
+          sortKey: -1746348027216
+        children:
+          - url: http://localhost:5000/api/v1/posts
+            name: Create a post
+            meta:
+              id: req_39f53389410a4f8f8264563ca67ee4fd
+              created: 1746348028695
+              modified: 1747229553019
+              isPrivate: false
+              sortKey: -1746348027215
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                    "content": "This is a private post",
+                    "privacy": "public",
+                    "backgroundColor": "#fff"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+            authentication:
+              type: bearer
+              disabled: false
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODEwYzU1YzVjMTQ5MzJjNjg5NTE1NTkiLCJuYW1lIjoiSm9obiIsImVtYWlsIjoiam9obkBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlzQWN0aXZlIjp0cnVlLCJpYXQiOjE3NDY2MTMwMjQsImV4cCI6MTc0NzIxNzgyNH0.JwWJ_GSr2w1XABWxJcnp8eEHXYp2KdLIAVmVQNxRDVQ
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:5000/api/v1/posts/reaction
+            name: Add reaction
+            meta:
+              id: req_a822ceaf648f4ae284449cf08ab834d5
+              created: 1746348028697
+              modified: 1746611339937
+              isPrivate: false
+              sortKey: -1746348027214
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                    "postId": "6819b769d8444c671d09fcb6",
+                    "type": "haha"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+            authentication:
+              type: bearer
+              disabled: false
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODE0YmRjZmZhYzgzODRlMWFhYzVkYTkiLCJuYW1lIjoiVGhvbWFzIiwiZW1haWwiOiJ0aG9tYXNAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJpc0FjdGl2ZSI6dHJ1ZSwiaWF0IjoxNzQ2NjAwMjM4LCJleHAiOjE3NDcyMDUwMzh9.-lacPTSKWmgFJTIdePnw_zP6lA3_TiIpdfhIDcknbLM
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:5000/api/v1/posts/delete-reaction
+            name: Remove reaction
+            meta:
+              id: req_59d5583c2c6645dd8ddea9fe86daffc9
+              created: 1746348028699
+              modified: 1747453827888
+              isPrivate: false
+              sortKey: -1746348027213
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                    "postId": "6819b769d8444c671d09fcb6"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+            authentication:
+              type: bearer
+              disabled: false
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODEwYzU1YzVjMTQ5MzJjNjg5NTE1NTkiLCJuYW1lIjoiSm9obiIsImVtYWlsIjoiam9obkBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlzQWN0aXZlIjp0cnVlLCJpYXQiOjE3NDY1MTU4MDgsImV4cCI6MTc0NzEyMDYwOH0.btC-DhMolJeja0KY72eaWCgRZ7FigcfBB1N7P5FHrmU
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:5000/api/v1/posts
+            name: Get all posts
+            meta:
+              id: req_6982ab5be06940a08e15837fd5c6770b
+              created: 1746348028702
+              modified: 1747295895245
+              isPrivate: false
+              sortKey: -1746348027212
+            method: GET
+            parameters:
+              - name: limit
+                value: "5"
+                disabled: false
+                id: pair_f57c39a48f5c40558f0871dc893c8d1e
+              - name: cursor
+                value: 2025-05-14T13:44:49.699Z
+                disabled: true
+                id: pair_97e7f7e84d1a44509ad10ac2152f5fb3
+            authentication:
+              type: bearer
+              disabled: false
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODIyZTYzZDRmNWRhYzFlMDU2ZGIwNTMiLCJuYW1lIjoiSm9obiIsImVtYWlsIjoiam9obkBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlzQWN0aXZlIjp0cnVlLCJpYXQiOjE3NDcyMzE2MTgsImV4cCI6MTc0NzgzNjQxOH0.dRiRD_MTX_nA8oZcKXx2Wn8_qB3dyjJKJ6v2hcRaBLA
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:5000/api/v1/posts/6825860f73c37fc03992af79
+            name: Get a post
+            meta:
+              id: req_0b49381fc73c4b39857ee88663d66d24
+              created: 1746348028704
+              modified: 1747304017482
+              isPrivate: false
+              sortKey: -1746348027211
+            method: GET
+            authentication:
+              type: bearer
+              disabled: false
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODIyZTYzZDRmNWRhYzFlMDU2ZGIwNTMiLCJuYW1lIjoiSm9obiIsImVtYWlsIjoiam9obkBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlzQWN0aXZlIjp0cnVlLCJpYXQiOjE3NDczMDQwMTIsImV4cCI6MTc0NzkwODgxMn0.7xh4YrymGHvdl47qYb357LGrAi9AcxBslBnrz5skhTo
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:5000/api/v1/posts/6819b769d8444c671d09fcb6
+            name: Update a post
+            meta:
+              id: req_a2bc24b9001349ffa02c68c3c881307a
+              created: 1746348028707
+              modified: 1747310864264
+              isPrivate: false
+              sortKey: -1746348027210
+            method: PATCH
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	 "content": "new", 
+                   "backgroundColor": "#ccc"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+            authentication:
+              type: bearer
+              disabled: false
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODEwYzU1YzVjMTQ5MzJjNjg5NTE1NTkiLCJuYW1lIjoiSm9obiIsImVtYWlsIjoiam9obkBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc0NTkzOTU5NywiZXhwIjoxNzQ2NTQ0Mzk3fQ.0LAAwFqM5y5ziicBN08nqwXZdDeCgfWdD8CVQNpU2mY
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:5000/api/v1/posts/6819b769d8444c671d09fcb6/upload
+            name: Upload media
+            meta:
+              id: req_9f03712aed0f4e62971235beb6615dea
+              created: 1746348028710
+              modified: 1747230572401
+              isPrivate: false
+              sortKey: -1746348027209
+            method: PATCH
+            body:
+              mimeType: application/json
+              text: |-
+                [
+                        {
+                			"public_id": "eb2w8zibofmfbkorknji",
+                			"version": 1747230556,
+                			"display_name": "eb2w8zibofmfbkorknji",
+                			"format": "jpg",
+                			"resource_type": "image"
+                		},
+                		{
+                			"public_id": "fzzlmznchiswanfqdn2c",
+                			"version": 1747230556,
+                			"display_name": "fzzlmznchiswanfqdn2c",
+                			"format": "webp",
+                			"resource_type": "image"
+                		}
+                    ]
+            headers:
+              - name: Content-Type
+                value: application/json
+            authentication:
+              type: bearer
+              disabled: false
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODEwYzU1YzVjMTQ5MzJjNjg5NTE1NTkiLCJuYW1lIjoiSm9obiIsImVtYWlsIjoiam9obkBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlzQWN0aXZlIjp0cnVlLCJpYXQiOjE3NDY1MTU4MDgsImV4cCI6MTc0NzEyMDYwOH0.btC-DhMolJeja0KY72eaWCgRZ7FigcfBB1N7P5FHrmU
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:5000/api/v1/posts/6819b769d8444c671d09fcb6/upload
+            name: Delete media
+            meta:
+              id: req_72acc6ad44aa4d41b1cd536bde877c1f
+              created: 1746348028713
+              modified: 1746516339690
+              isPrivate: false
+              sortKey: -1746348027208
+            method: DELETE
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                    "mediaId": "zshvxxnvie1risnrxuyo"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+            authentication:
+              type: bearer
+              disabled: false
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODEwYzU1YzVjMTQ5MzJjNjg5NTE1NTkiLCJuYW1lIjoiSm9obiIsImVtYWlsIjoiam9obkBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc0NTkzOTU5NywiZXhwIjoxNzQ2NTQ0Mzk3fQ.0LAAwFqM5y5ziicBN08nqwXZdDeCgfWdD8CVQNpU2mY
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:5000/api/v1/posts/6811c1ace662f723eadeb1ef
+            name: Delete post
+            meta:
+              id: req_7bba5921436946ecbe19cacccd37a6a8
+              created: 1746348028716
+              modified: 1746348028716
+              isPrivate: false
+              sortKey: -1746348027207
+            method: DELETE
+            body:
+              mimeType: application/json
+              text: "{\r\n   \"privacy\": \"private\"\r\n}"
+            headers:
+              - name: Content-Type
+                value: application/json
+            authentication:
+              type: bearer
+              disabled: false
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODEwYzU1YzVjMTQ5MzJjNjg5NTE1NTkiLCJuYW1lIjoiSm9obiIsImVtYWlsIjoiam9obkBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc0NTkzOTU5NywiZXhwIjoxNzQ2NTQ0Mzk3fQ.0LAAwFqM5y5ziicBN08nqwXZdDeCgfWdD8CVQNpU2mY
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:5000/api/v1/posts/6827079475ff446e59b37e10/reaction
+            name: Get a post reaction
+            meta:
+              id: req_6e5398cdf7ad4738ad409f1a8effe186
+              created: 1746517949000
+              modified: 1747471054231
+              isPrivate: false
+              sortKey: -1746348027210.5
+            method: GET
+            authentication:
+              type: bearer
+              disabled: false
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODIyZTYzZDRmNWRhYzFlMDU2ZGIwNTMiLCJuYW1lIjoiSm9obiIsImVtYWlsIjoiam9obkBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlzQWN0aXZlIjp0cnVlLCJpYXQiOjE3NDc0NzEwMjgsImV4cCI6MTc0ODA3NTgyOH0.31I7Gm6Yy_RFxHUl3TsLdCAfDZh5zDYYoImUmF8XSmA
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:5000/api/v1/posts/6819b769d8444c671d09fcb6/replace
+            name: Replace media
+            meta:
+              id: req_88ec91e8b6f34e4fb2c650f68e3f89cb
+              created: 1747310732870
+              modified: 1747311174680
+              isPrivate: false
+              sortKey: -1746348027208.5
+            method: PATCH
+            body:
+              mimeType: application/json
+              text: |-
+                [
+                        {
+                			"public_id": "eb2w8zibofmfbkorknji",
+                			"version": 1747230556,
+                			"display_name": "eb2w8zibofmfbkorknji",
+                			"format": "jpg",
+                			"resource_type": "image"
+                		},
+                		{
+                			"public_id": "fzzlmznchiswanfqdn2c",
+                			"version": 1747230556,
+                			"display_name": "fzzlmznchiswanfqdn2c",
+                			"format": "webp",
+                			"resource_type": "image"
+                		}
+                    ]
+            headers:
+              - name: Content-Type
+                value: application/json
+            authentication:
+              type: bearer
+              disabled: false
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODEwYzU1YzVjMTQ5MzJjNjg5NTE1NTkiLCJuYW1lIjoiSm9obiIsImVtYWlsIjoiam9obkBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlzQWN0aXZlIjp0cnVlLCJpYXQiOjE3NDY1MTU4MDgsImV4cCI6MTc0NzEyMDYwOH0.btC-DhMolJeja0KY72eaWCgRZ7FigcfBB1N7P5FHrmU
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: Cloudinary
+        meta:
+          id: fld_c4718603a3174cf382fc63ec5a3e12d1
+          created: 1746348028719
+          modified: 1746348028719
+          sortKey: -1746348027206
+        children:
+          - url: http://localhost:5000/api/v1/cloudinary/upload
+            name: Upload file
+            meta:
+              id: req_5dc2356b6a4548168308f42f259d5e7e
+              created: 1746348028721
+              modified: 1746427393088
+              isPrivate: false
+              sortKey: -1746348027205
+            method: POST
+            body:
+              mimeType: multipart/form-data
+              params:
+                - type: file
+                  name: file
+                  disabled: false
+                  fileName: /C:/Users/Nguyen Van/Desktop/images/apple.png
+                  id: pair_30693ae685b547ccb175b04a3771a7da
+                - id: pair_48387d15f7d645a3a34213a1f02246d0
+                  disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:5000/api/v1/cloudinary/upload-multiple
+            name: Upload multiple file
+            meta:
+              id: req_a4bdfb69ef4e4183b206f8cca3025c0a
+              created: 1746427422466
+              modified: 1747230553826
+              isPrivate: false
+              sortKey: -1746348027203.5
+            method: POST
+            body:
+              mimeType: multipart/form-data
+              params:
+                - type: file
+                  name: files
+                  disabled: false
+                  fileName: C:\Users\Nguyen Van\Desktop\images\backGround.jpg
+                  id: pair_30693ae685b547ccb175b04a3771a7da
+                - id: pair_48387d15f7d645a3a34213a1f02246d0
+                  name: files
+                  disabled: false
+                  type: file
+                  fileName: C:\Users\Nguyen Van\Desktop\images\airpods3_3.png
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: Comment
+        meta:
+          id: fld_86b1eef514834509b304a11cc612ef48
+          created: 1746348028726
+          modified: 1746348028726
+          sortKey: -1746348027203
+        children:
+          - url: http://localhost:5000/api/v1/comments
+            name: Create a comment
+            meta:
+              id: req_f61cc7205eb94454a5383f47d0e3218d
+              created: 1746348028728
+              modified: 1746525026410
+              isPrivate: false
+              sortKey: -1746348027202
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                   "postId": "6811e04a1d99ff9f92111e18",
+                   "content": "Comment 4",
+                   "parentCommentId": "6819db145a1b7bd41ada3ef8",
+                   "replyToUserId": "6810c581942a5d0f6523d20f"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+            authentication:
+              type: bearer
+              disabled: false
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODEwYzU4MTk0MmE1ZDBmNjUyM2QyMGYiLCJuYW1lIjoiSm9obiIsImVtYWlsIjoiam9objFAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NDYwODQ5NjAsImV4cCI6MTc0NjY4OTc2MH0.hFld768J0M7K_uOJVxDF5fvFV6WONT-ntDFAvNFfecs
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:5000/api/v1/comments/post/6811e04a1d99ff9f92111e18
+            name: Get all comment by post
+            meta:
+              id: req_05ad9bac71c24674807c9cc7b1705fac
+              created: 1746348028730
+              modified: 1746524486206
+              isPrivate: false
+              sortKey: -1746348027201
+            method: GET
+            body:
+              mimeType: application/json
+              text: "{\r
+
+                \   \"postId\": \"6811e04a1d99ff9f92111e18\",\r
+
+                \   \"content\": \"I think so\",\r
+
+                \   \"parentCommentId\": \"6812e99d2252467e1f1ca6cf\",\r
+
+                \   \"replyToUserId\": \"6810c55c5c14932c68951559\"\r
+
+                }"
+            headers:
+              - name: Content-Type
+                value: application/json
+            authentication:
+              type: bearer
+              disabled: false
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODEwYzU1YzVjMTQ5MzJjNjg5NTE1NTkiLCJuYW1lIjoiSm9obiIsImVtYWlsIjoiam9obkBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc0NjA2OTg4MSwiZXhwIjoxNzQ2Njc0NjgxfQ.p0WoifaXv0_YS6c9HpodnQkO5cyKlrZ7kkoAUgp0oqk
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:5000/api/v1/comments/6812e99d2252467e1f1ca6cf
+            name: Update comment
+            meta:
+              id: req_76ef1e10e632462f9121a9e3abf82964
+              created: 1746348028734
+              modified: 1746525698976
+              isPrivate: false
+              sortKey: -1746348027200
+            method: PATCH
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                   
+                   "content": "update socket"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+            authentication:
+              type: bearer
+              disabled: false
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODEwYzU1YzVjMTQ5MzJjNjg5NTE1NTkiLCJuYW1lIjoiSm9obiIsImVtYWlsIjoiam9obkBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc0NjA2OTg4MSwiZXhwIjoxNzQ2Njc0NjgxfQ.p0WoifaXv0_YS6c9HpodnQkO5cyKlrZ7kkoAUgp0oqk
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:5000/api/v1/comments/681324967ced37340ba0fa12
+            name: Delete comment
+            meta:
+              id: req_43641b0096b843e08827291f9b72fe63
+              created: 1746348028737
+              modified: 1746348028737
+              isPrivate: false
+              sortKey: -1746348027199
+            method: DELETE
+            body:
+              mimeType: application/json
+              text: "{\r
+
+                \   \r
+
+                \   \"content\": \"update comment\"\r
+
+                }"
+            headers:
+              - name: Content-Type
+                value: application/json
+            authentication:
+              type: bearer
+              disabled: false
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODEwYzU4MTk0MmE1ZDBmNjUyM2QyMGYiLCJuYW1lIjoiSm9obiIsImVtYWlsIjoiam9objFAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NDYwODQ5NjAsImV4cCI6MTc0NjY4OTc2MH0.hFld768J0M7K_uOJVxDF5fvFV6WONT-ntDFAvNFfecs
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: Conversation
+        meta:
+          id: fld_97c0fba3c01b4e81bdda56d116e7c241
+          created: 1746348028741
+          modified: 1746348028741
+          sortKey: -1746348027198
+        children:
+          - url: http://localhost:5000/api/v1/conversations/private
+            name: Create a private conversation
+            meta:
+              id: req_062d101561b8443cbeedb410a1164ca8
+              created: 1746348028743
+              modified: 1747813060990
+              isPrivate: false
+              sortKey: -1746348027197
+            method: POST
+            body:
+              mimeType: application/json
+              text: |
+                {
+                   "participantId": "6822f9b8d867609e319d922f"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+            authentication:
+              type: bearer
+              disabled: false
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODIyZTYzZDRmNWRhYzFlMDU2ZGIwNTMiLCJuYW1lIjoiVmFuIE5ndXllbiIsImVtYWlsIjoiam9obkBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlzQWN0aXZlIjp0cnVlLCJpYXQiOjE3NDc4MTMwMzIsImV4cCI6MTc0ODQxNzgzMn0.g83kWaiRShIGQZgAbRb8fWMK-x0PhdbJsqZGw4xYmUI
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:5000/api/v1/conversations/group
+            name: Create a group conversation
+            meta:
+              id: req_90490464efb64ca8b43b21638aa6e178
+              created: 1746348028746
+              modified: 1746348028746
+              isPrivate: false
+              sortKey: -1746348027196
+            method: POST
+            body:
+              mimeType: application/json
+              text: "{\r
+
+                \   \"participantIds\": [\"6810c581942a5d0f6523d20f\",
+                \"6814bdcffac8384e1aac5da9\"],\r
+
+                \   \"groupName\": \"Relax Group\",\r
+
+                \   \"groupAvatar\": {\r
+
+                \        \"public_id\": \"cn30yirageggat0mr90f\",\r
+
+                \        \"version\": 1746275172,\r
+
+                \        \"display_name\": \"cn30yirageggat0mr90f\",\r
+
+                \        \"format\": \"png\",\r
+
+                \        \"resource_type\": \"image\"\r
+
+                \   }\r
+
+                }"
+            headers:
+              - name: Content-Type
+                value: application/json
+            authentication:
+              type: bearer
+              disabled: false
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODEwYzU1YzVjMTQ5MzJjNjg5NTE1NTkiLCJuYW1lIjoiSm9obiIsImVtYWlsIjoiam9obkBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlzQWN0aXZlIjp0cnVlLCJpYXQiOjE3NDYyNjIxNjUsImV4cCI6MTc0Njg2Njk2NX0.rKZzBBOOzSObdZ7TfSw84RwJM2bb5mgmX2OvvvMqfdI
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:5000/api/v1/conversations
+            name: Get my conversations
+            meta:
+              id: req_ff8885f823c249a2913e07198c46d0bf
+              created: 1746348028750
+              modified: 1747813084727
+              isPrivate: false
+              sortKey: -1746348027195
+            method: GET
+            body:
+              mimeType: application/json
+            headers:
+              - name: Content-Type
+                value: application/json
+            authentication:
+              type: bearer
+              disabled: false
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODIyZTYzZDRmNWRhYzFlMDU2ZGIwNTMiLCJuYW1lIjoiVmFuIE5ndXllbiIsImVtYWlsIjoiam9obkBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlzQWN0aXZlIjp0cnVlLCJpYXQiOjE3NDc4MTAyNDcsImV4cCI6MTc0ODQxNTA0N30.KEDttI8FXJao3a6Sx3w8JwGN_58MhLdVNmyuE13vrMw
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:5000/api/v1/conversations/682d77e0b7bfab67f8c45958
+            name: Get conversation details
+            meta:
+              id: req_8f437a9e6ab048b6b699cc793c0a786f
+              created: 1746348028752
+              modified: 1747810574902
+              isPrivate: false
+              sortKey: -1746348027194
+            method: GET
+            body:
+              mimeType: application/json
+              text: "{\r
+
+                \   \"postId\": \"6811e04a1d99ff9f92111e18\",\r
+
+                \   \"content\": \"I think so\",\r
+
+                \   \"parentCommentId\": \"6812e99d2252467e1f1ca6cf\",\r
+
+                \   \"replyToUserId\": \"6810c55c5c14932c68951559\"\r
+
+                }"
+            headers:
+              - name: Content-Type
+                value: application/json
+            authentication:
+              type: bearer
+              disabled: false
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODIyZTYzZDRmNWRhYzFlMDU2ZGIwNTMiLCJuYW1lIjoiVmFuIE5ndXllbiIsImVtYWlsIjoiam9obkBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlzQWN0aXZlIjp0cnVlLCJpYXQiOjE3NDc4MTAyNDcsImV4cCI6MTc0ODQxNTA0N30.KEDttI8FXJao3a6Sx3w8JwGN_58MhLdVNmyuE13vrMw
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:5000/api/v1/conversations/68160b7adfc7e6aee680c713
+            name: Update conversation
+            meta:
+              id: req_14fd8752d74d4a95a435bbaa6ab961d2
+              created: 1746348028756
+              modified: 1746348028756
+              isPrivate: false
+              sortKey: -1746348027193
+            method: PATCH
+            body:
+              mimeType: application/json
+              text: "{\r
+
+                \   \"groupName\": \"Relax Group - update\"\r
+
+                }"
+            headers:
+              - name: Content-Type
+                value: application/json
+            authentication:
+              type: bearer
+              disabled: false
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODE0YmRjZmZhYzgzODRlMWFhYzVkYTkiLCJuYW1lIjoiVGhvbWFzIiwiZW1haWwiOiJ0aG9tYXNAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJpc0FjdGl2ZSI6dHJ1ZSwiaWF0IjoxNzQ2Mjc4NTY5LCJleHAiOjE3NDY4ODMzNjl9.kLRe9a0Fv25QHy47Cy_n3qxx-vixxtMOFvjDqhhBhDk
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:5000/api/v1/conversations/68160b3adfc7e6aee680c711/add-members
+            name: Add members to conversation
+            meta:
+              id: req_b068ee199b6045358c123bf33591f70a
+              created: 1746348028760
+              modified: 1746348610881
+              isPrivate: false
+              sortKey: -1746348027192
+            method: PATCH
+            body:
+              mimeType: application/json
+              text: >-
+                {
+                   "participantIds": ["6810c55c5c14932c68951559", "6810c581942a5d0f6523d20f", "6814bdcffac8384e1aac5da9"]
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+            authentication:
+              type: bearer
+              disabled: false
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODEwYzU1YzVjMTQ5MzJjNjg5NTE1NTkiLCJuYW1lIjoiSm9obiIsImVtYWlsIjoiam9obkBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlzQWN0aXZlIjp0cnVlLCJpYXQiOjE3NDYzNDgwNDgsImV4cCI6MTc0Njk1Mjg0OH0.UyJRlGsjH23Y9k3JCP-0RDpuZ5UgIWdbD1PRiG2RNEw
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:5000/api/v1/conversations/6815d8cc02cd5b7981c7d087
+            name: Delete conversation
+            meta:
+              id: req_80dc7127a2f24f169c66b7d04bb90798
+              created: 1746348028764
+              modified: 1746426178493
+              isPrivate: false
+              sortKey: -1746348027191
+            method: DELETE
+            body:
+              mimeType: application/json
+            headers:
+              - name: Content-Type
+                value: application/json
+            authentication:
+              type: bearer
+              disabled: false
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODEwYzU1YzVjMTQ5MzJjNjg5NTE1NTkiLCJuYW1lIjoiSm9obiIsImVtYWlsIjoiam9obkBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlzQWN0aXZlIjp0cnVlLCJpYXQiOjE3NDY0MjYxNTEsImV4cCI6MTc0NzAzMDk1MX0.mWLIS8iHnws_Q9pn5dzL0-hZBh-DHDIPAPTMDrirXOQ
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:5000/api/v1/conversations/68160b3adfc7e6aee680c711/remove-members
+            name: Remove members from conversation
+            meta:
+              id: req_9477dbe64a3641feba6d22ef730dcf44
+              created: 1746348073044
+              modified: 1746348915148
+              isPrivate: false
+              sortKey: -1746348027191.5
+            method: PATCH
+            body:
+              mimeType: application/json
+              text: >-
+                {
+                   "participantIds": ["6810c581942a5d0f6523d20f", "6814bdcffac8384e1aac5da9"]
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+            authentication:
+              type: bearer
+              disabled: false
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODEwYzU1YzVjMTQ5MzJjNjg5NTE1NTkiLCJuYW1lIjoiSm9obiIsImVtYWlsIjoiam9obkBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlzQWN0aXZlIjp0cnVlLCJpYXQiOjE3NDYzNDgwNDgsImV4cCI6MTc0Njk1Mjg0OH0.UyJRlGsjH23Y9k3JCP-0RDpuZ5UgIWdbD1PRiG2RNEw
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: Message
+        meta:
+          id: fld_fe4f191d4cd94fe4a0d257638db67023
+          created: 1746427135438
+          modified: 1746427191267
+          sortKey: -1746348027200.5
+        children:
+          - url: http://localhost:5000/api/v1/messages/conversation/682d82c513d1ed613f2a1ee0
+            name: Send message
+            meta:
+              id: req_a635183acd1b429695ac54bf1733bf0d
+              created: 1746427159344
+              modified: 1747813849958
+              isPrivate: false
+              sortKey: -1746427184194
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                   "text": "Hello"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+            authentication:
+              type: bearer
+              disabled: false
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODIyZTYzZDRmNWRhYzFlMDU2ZGIwNTMiLCJuYW1lIjoiVmFuIE5ndXllbiIsImVtYWlsIjoiam9obkBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlzQWN0aXZlIjp0cnVlLCJpYXQiOjE3NDc4MTM2MDEsImV4cCI6MTc0ODQxODQwMX0.vGNGlVvIeBeoIosIC7nRU-cUswG7bZyhT8VBQf4357A
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:5000/api/v1/messages/conversation/682d82c513d1ed613f2a1ee0
+            name: Get all messages in conversation
+            meta:
+              id: req_fc2848b9accb4ece95f786951fcf4ff5
+              created: 1746428356484
+              modified: 1747813861309
+              isPrivate: false
+              sortKey: -1746387605713.5
+            method: GET
+            body:
+              mimeType: application/json
+            parameters:
+              - id: pair_0d85e8a0e54b4e0389bdc87e8bb51048
+                name: limit
+                value: "1"
+                disabled: true
+              - id: pair_80da4eeec5db496f844af37edea07436
+                name: cursor
+                value: 2025-05-05T06:41:12.611Z
+                disabled: true
+            headers:
+              - name: Content-Type
+                value: application/json
+            authentication:
+              type: bearer
+              disabled: false
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODIyZTYzZDRmNWRhYzFlMDU2ZGIwNTMiLCJuYW1lIjoiVmFuIE5ndXllbiIsImVtYWlsIjoiam9obkBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlzQWN0aXZlIjp0cnVlLCJpYXQiOjE3NDc4MTM2MDEsImV4cCI6MTc0ODQxODQwMX0.vGNGlVvIeBeoIosIC7nRU-cUswG7bZyhT8VBQf4357A
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:5000/api/v1/messages/681876d72cddad76addc52c4
+            name: Update message
+            meta:
+              id: req_3943739ca1104028ad4c8d2d58f61920
+              created: 1746432660549
+              modified: 1746456995807
+              isPrivate: false
+              sortKey: -1746407394953.75
+            method: PATCH
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                   "text": "Hi - update",
+                	 "mediaFiles": [
+                		{
+                			"public_id": "r5sj4jqutsxiabafk5sr",
+                			"version": 1746427452,
+                			"display_name": "r5sj4jqutsxiabafk5sr",
+                			"format": "jpg",
+                			"resource_type": "image"
+                		},
+                		{
+                			"public_id": "pc6znc8wyjpv9rfixpeu",
+                			"version": 1746427451,
+                			"display_name": "pc6znc8wyjpv9rfixpeu",
+                			"format": "jpg",
+                			"resource_type": "image"
+                		}
+                	]
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+            authentication:
+              type: bearer
+              disabled: false
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODEwYzU1YzVjMTQ5MzJjNjg5NTE1NTkiLCJuYW1lIjoiSm9obiIsImVtYWlsIjoiam9obkBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlzQWN0aXZlIjp0cnVlLCJpYXQiOjE3NDY0MjYxNTEsImV4cCI6MTc0NzAzMDk1MX0.mWLIS8iHnws_Q9pn5dzL0-hZBh-DHDIPAPTMDrirXOQ
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:5000/api/v1/messages/68185d88ffca380d744bad57
+            name: Delete message
+            meta:
+              id: req_37e3b075cdaf4d96a9aa84aaf2a10876
+              created: 1746432912477
+              modified: 1747816521558
+              isPrivate: false
+              sortKey: -1746397500333.625
+            method: DELETE
+            body:
+              mimeType: application/json
+            headers:
+              - name: Content-Type
+                value: application/json
+            authentication:
+              type: bearer
+              disabled: false
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODEwYzU1YzVjMTQ5MzJjNjg5NTE1NTkiLCJuYW1lIjoiSm9obiIsImVtYWlsIjoiam9obkBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlzQWN0aXZlIjp0cnVlLCJpYXQiOjE3NDY0MjYxNTEsImV4cCI6MTc0NzAzMDk1MX0.mWLIS8iHnws_Q9pn5dzL0-hZBh-DHDIPAPTMDrirXOQ
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:5000/api/v1/messages/6818a6c3b8a765b81e47d80d/seen
+            name: Seen message
+            meta:
+              id: req_7d1c78676f9f437abbde02cbf9f0b9e0
+              created: 1746433799152
+              modified: 1746458416761
+              isPrivate: false
+              sortKey: -1746392553023.5625
+            method: PATCH
+            body:
+              mimeType: application/json
+            headers:
+              - name: Content-Type
+                value: application/json
+            authentication:
+              type: bearer
+              disabled: false
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODEwYzU1YzVjMTQ5MzJjNjg5NTE1NTkiLCJuYW1lIjoiSm9obiIsImVtYWlsIjoiam9obkBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlzQWN0aXZlIjp0cnVlLCJpYXQiOjE3NDY0NTg0MTEsImV4cCI6MTc0NzA2MzIxMX0.aOeUoIXjmDWlJKNJyVoRdv77MA5FSJonplurCTZcA5c
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: Notification
+        meta:
+          id: fld_7800e07995c446c7847d93cb0af01759
+          created: 1746609591541
+          modified: 1746609603418
+          sortKey: -1746348027199.25
+        children:
+          - url: http://localhost:5000/api/v1/notifications
+            name: Get my notification
+            meta:
+              id: req_dd0c85acbf864115a59d1354e998d307
+              created: 1746609609144
+              modified: 1746610433239
+              isPrivate: false
+              sortKey: -1746609609144
+            method: GET
+            parameters:
+              - id: pair_2e0f44e2c1184711be843b59e20727bf
+                name: limit
+                value: "1"
+                disabled: false
+              - id: pair_66806a03d9784ab8b42a6af4a2405085
+                name: cursor
+                value: 2025-05-07T09:26:51.002Z
+                disabled: false
+            headers:
+              - name: User-Agent
+                value: insomnia/11.0.2
+            authentication:
+              type: bearer
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODEwYzU1YzVjMTQ5MzJjNjg5NTE1NTkiLCJuYW1lIjoiSm9obiIsImVtYWlsIjoiam9obkBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlzQWN0aXZlIjp0cnVlLCJpYXQiOjE3NDY2MDk2MjksImV4cCI6MTc0NzIxNDQyOX0.u2AnQZi20v3mq6dhammxlw5x273AzBg2-cp_nCwdj-E
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:5000/api/v1/notifications/681b019158204aa6f7552024/read
+            name: Mark as read
+            meta:
+              id: req_331e1ec588fd470db7a550a31857097d
+              created: 1746610699919
+              modified: 1746610722520
+              isPrivate: false
+              sortKey: -1746518396669
+            method: PATCH
+            parameters:
+              - id: pair_2e0f44e2c1184711be843b59e20727bf
+                name: limit
+                value: "1"
+                disabled: false
+              - id: pair_66806a03d9784ab8b42a6af4a2405085
+                name: cursor
+                value: 2025-05-07T09:26:51.002Z
+                disabled: false
+            headers:
+              - name: User-Agent
+                value: insomnia/11.0.2
+            authentication:
+              type: bearer
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODEwYzU1YzVjMTQ5MzJjNjg5NTE1NTkiLCJuYW1lIjoiSm9obiIsImVtYWlsIjoiam9obkBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlzQWN0aXZlIjp0cnVlLCJpYXQiOjE3NDY2MDk2MjksImV4cCI6MTc0NzIxNDQyOX0.u2AnQZi20v3mq6dhammxlw5x273AzBg2-cp_nCwdj-E
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:5000/api/v1/notifications/read-all
+            name: Mark as read all
+            meta:
+              id: req_6c81fc8bf8b04bd9afab4c4452d8593e
+              created: 1746610933014
+              modified: 1746610948927
+              isPrivate: false
+              sortKey: -1746472790431.5
+            method: PATCH
+            parameters:
+              - id: pair_2e0f44e2c1184711be843b59e20727bf
+                name: limit
+                value: "1"
+                disabled: false
+              - id: pair_66806a03d9784ab8b42a6af4a2405085
+                name: cursor
+                value: 2025-05-07T09:26:51.002Z
+                disabled: false
+            headers:
+              - name: User-Agent
+                value: insomnia/11.0.2
+            authentication:
+              type: bearer
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODEwYzU1YzVjMTQ5MzJjNjg5NTE1NTkiLCJuYW1lIjoiSm9obiIsImVtYWlsIjoiam9obkBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlzQWN0aXZlIjp0cnVlLCJpYXQiOjE3NDY2MDk2MjksImV4cCI6MTc0NzIxNDQyOX0.u2AnQZi20v3mq6dhammxlw5x273AzBg2-cp_nCwdj-E
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_fd6d89b8827be9909efced170b9650acda52c1ea
+    created: 1746348028772
+    modified: 1746348028772
+environments:
+  name: Base Environment
+  meta:
+    id: env_fd6d89b8827be9909efced170b9650acda52c1ea
+    created: 1746348028768
+    modified: 1746348028768
+    isPrivate: false
