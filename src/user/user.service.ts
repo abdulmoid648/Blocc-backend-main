@@ -18,7 +18,7 @@ export class UserService {
     @InjectModel(User.name) private userModel: Model<User>,
     @InjectModel(Post.name) private postModel: Model<Post>,
     @InjectModel(FriendRequest.name) private friendModel: Model<FriendRequest>,
-  ) {}
+  ) { }
 
   // ...existing code...
   async findAll(

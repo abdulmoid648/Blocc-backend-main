@@ -26,7 +26,7 @@ export class PostService {
     private userService: UserService,
     private postGateway: PostGateway,
     @InjectModel(FriendRequest.name) private friendModel: Model<FriendRequest>,
-  ) {}
+  ) { }
 
   async create(createPostDto: CreatePostDto, currentUser: IUserPayload) {
     const newPost = new this.postModel({
@@ -136,7 +136,9 @@ export class PostService {
         .select('receiver')
         .lean();
       const sentRequestReceiverIds1 = new Set(
-        sentRequests1.map((req) => req.receiver?._id?.toString() || req.receiver?.toString()),
+        sentRequests1.map(
+          (req) => req.receiver?._id?.toString() || req.receiver?.toString(),
+        ),
       );
 
       const postsWithReaction = await Promise.all(
@@ -145,11 +147,15 @@ export class PostService {
             post._id.toString(),
             currentUser._id,
           );
-          return { 
-            ...post, 
+          return {
+            ...post,
             myReaction: myReaction?.type || null,
-            isFollowing: (user.friends || []).some(f => f._id.toString() === post.author._id.toString()),
-            followRequested: sentRequestReceiverIds1.has(post.author._id.toString())
+            isFollowing: (user.friends || []).some(
+              (f) => f._id.toString() === post.author._id.toString(),
+            ),
+            followRequested: sentRequestReceiverIds1.has(
+              post.author._id.toString(),
+            ),
           };
         }),
       );
@@ -192,7 +198,9 @@ export class PostService {
       .select('receiver')
       .lean();
     const sentRequestReceiverIds = new Set(
-      sentRequests.map((req) => req.receiver?._id?.toString() || req.receiver?.toString()),
+      sentRequests.map(
+        (req) => req.receiver?._id?.toString() || req.receiver?.toString(),
+      ),
     );
 
     const postsWithReaction = await Promise.all(
@@ -201,11 +209,13 @@ export class PostService {
           post._id.toString(),
           currentUser._id,
         );
-        return { 
-          ...post, 
+        return {
+          ...post,
           myReaction: myReaction?.type || null,
           isFollowing: friendsOfAuthorIds.includes(post.author._id.toString()),
-          followRequested: sentRequestReceiverIds.has(post.author._id.toString())
+          followRequested: sentRequestReceiverIds.has(
+            post.author._id.toString(),
+          ),
         };
       }),
     );

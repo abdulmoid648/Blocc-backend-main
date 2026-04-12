@@ -12,8 +12,7 @@ import { ResponseMessageDto } from './dto/response-message.dto';
 
 @WebSocketGateway({ cors: { origin: '*' } })
 export class MessageGateway
-  implements OnGatewayConnection, OnGatewayDisconnect
-{
+  implements OnGatewayConnection, OnGatewayDisconnect {
   @WebSocketServer()
   server: Server; // === io
 

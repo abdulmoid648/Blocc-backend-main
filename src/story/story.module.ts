@@ -11,6 +11,6 @@ import { CloudinaryModule } from 'src/cloudinary/cloudinary.module';
     CloudinaryModule,
   ],
   controllers: [StoryController],
-  providers: [StoryService]
+  providers: [StoryService],
 })
 export class StoryModule {}

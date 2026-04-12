@@ -11,7 +11,7 @@ export class StoryService {
   constructor(
     @InjectModel(Story.name) private storyModel: Model<StoryDocument>,
     private cloudinaryService: CloudinaryService,
-  ) {}
+  ) { }
 
   async createStory(
     user: UserDocument,
@@ -19,16 +19,20 @@ export class StoryService {
     file?: Express.Multer.File,
   ): Promise<Story> {
     if (!file && !createStoryDto.sharedPostId && !createStoryDto.caption) {
-      throw new BadRequestException('Story must contain either media, a shared post, or text caption.');
+      throw new BadRequestException(
+        'Story must contain either media, a shared post, or text caption.',
+      );
     }
 
     let media: any[] = [];
     if (file) {
       const uploadResult = await this.cloudinaryService.uploadFile(file);
-      media = [{
-        url: uploadResult.secure_url,
-        type: file.mimetype.startsWith('video') ? 'video' : 'image',
-      }];
+      media = [
+        {
+          url: uploadResult.secure_url,
+          type: file.mimetype.startsWith('video') ? 'video' : 'image',
+        },
+      ];
     }
 
     let backgroundGradient = ['#a18cd1', '#fbc2eb']; // Default gradient
@@ -36,7 +40,9 @@ export class StoryService {
       try {
         backgroundGradient = JSON.parse(createStoryDto.backgroundGradient);
       } catch (e) {
-        backgroundGradient = createStoryDto.backgroundGradient.split(',').map((c) => c.trim());
+        backgroundGradient = createStoryDto.backgroundGradient
+          .split(',')
+          .map((c) => c.trim());
       }
     }
 
@@ -60,12 +66,12 @@ export class StoryService {
       .find()
       .populate('author', 'name avatarUrl username')
       .populate({
-         path: 'sharedPost',
-         populate: { path: 'author', select: 'name avatarUrl' }
+        path: 'sharedPost',
+        populate: { path: 'author', select: 'name avatarUrl' },
       })
       .sort({ createdAt: -1 })
       .exec();
-    
+
     return stories;
   }
 }

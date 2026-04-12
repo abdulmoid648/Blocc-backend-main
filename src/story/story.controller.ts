@@ -17,7 +17,7 @@ import { CurrentUser } from 'src/_cores/decorators/current-user.decorator';
 @Controller('stories')
 @UseGuards(AuthGuard, RoleGuard)
 export class StoryController {
-  constructor(private readonly storyService: StoryService) {}
+  constructor(private readonly storyService: StoryService) { }
 
   @Post()
   @UseInterceptors(FileInterceptor('file'))
