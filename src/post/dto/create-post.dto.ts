@@ -10,7 +10,7 @@ export class CreatePostDto {
   @IsOptional()
   @IsHexColor()
   backgroundColor: string;
-  @IsNotEmpty()
+  @IsOptional()
   @IsString()
   content: string;
   @IsOptional()
