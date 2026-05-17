@@ -1,9 +1,10 @@
 import { Expose, Transform, Type } from 'class-transformer';
 import { ResponsePostDto, MediaType } from './response-post.dto';
 import { ResponseUserDto } from 'src/user/dto/response-user.dto';
+import { ObjectId } from 'src/_cores/decorators/object-id.decorator';
 
 export class ResponseAuthorDto {
-  @Expose() _id!: string;
+  @Expose() @ObjectId() _id!: string;
   @Expose() name!: string;
   @Expose() email!: string;
   @Expose() bio!: string;

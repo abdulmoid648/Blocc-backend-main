@@ -23,7 +23,7 @@ export class MessageService {
     private conversationService: ConversationService,
     private userService: UserService,
     private messageGateway: MessageGateway,
-  ) {}
+  ) { }
 
   async getAllMessages(conversationId: string, limit: number, cursor: string) {
     const query: Record<string, any> = {
