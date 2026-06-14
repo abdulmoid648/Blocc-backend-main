@@ -72,6 +72,11 @@ export class UserController {
     return this.userService.findOne(id);
   }
 
+  @Get(':id/friends')
+  getFriends(@Param('id', ParseObjectIdPipe) id: string) {
+    return this.userService.getFriends(id);
+  }
+
   @Patch(':id')
   @TransformDTO(ResponseUserDto)
   @Roles('admin', 'user')
